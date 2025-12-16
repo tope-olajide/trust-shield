@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Trust Shield Anti-Phishing",
+  "version": "1.0",
+  "description": "Scans websites for phishing using your custom API. Shows 🛡️ for safe, ⚠️ for risky.",
+"icons": {
+  "16": "icons/shield-16.png",
+  "48": "icons/shield-48.png",
+  "128": "icons/shield-128.png"
+},
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Trust Shield Scan"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "notifications",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://xmmh-djbw-xefx.n7e.xano.io/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

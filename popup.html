@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="api-key-section">
+    <h2>Enter Your API Key</h2>
+    <input type="password" id="api-key-input" placeholder="Your x-api-key">
+    <button id="save-key">Save</button>
+    <p id="key-error" style="color:red;display:none;">Please enter a key!</p>
+  </div>
+
+  <div id="scan-section" style="display:none;">
+    <h2>Trust Shield Scan 🛡️</h2>
+    <div id="loading">Scanning current site...</div>
+    <div id="result" style="display:none;">
+      <h3 id="site-url"></h3>
+      <div id="status" class="status"></div>
+      <p><strong>Score:</strong> <span id="score"></span></p>
+      <p><strong>Label:</strong> <span id="label"></span></p>
+      <p><strong>Recommendation:</strong> <span id="recommendation"></span></p>
+      <p><strong>Summary:</strong> <span id="summary"></span></p>
+      <button id="rescan">Rescan Current Site</button>
+      <button id="change-key">Change API Key</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
